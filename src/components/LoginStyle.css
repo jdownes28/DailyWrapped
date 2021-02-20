@@ -1,0 +1,94 @@
+/* Background gradient */
+.wrapper {
+	height: 100vh;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	background: rgb(255, 255, 255);
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(7, 7, 13, 1) 35%
+	);
+	/* background: no-repeat; */
+}
+
+/* Hides login prompt until animation  */
+.title {
+	display: none;
+}
+
+/* is subbed in on mouse enter of logo */
+.showTitle {
+	padding: 2%;
+	display: block;
+	color: #1ed760;
+	-webkit-animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	animation: fade-in-fwd 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* Position of logo to center */
+.pic {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* Animation on hover of logo */
+.pic:hover {
+	-webkit-animation: rotate-center 1s ease-in-out both;
+	animation: rotate-center 1s ease-in-out both;
+}
+
+/* animation rotate-center spin once - animista*/
+
+@-webkit-keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/* fade in animation - animista */
+@-webkit-keyframes fade-in-fwd {
+	0% {
+		-webkit-transform: translateZ(-80px);
+		transform: translateZ(-80px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+@keyframes fade-in-fwd {
+	0% {
+		-webkit-transform: translateZ(-80px);
+		transform: translateZ(-80px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
